@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="SuiteName">
+    <test name="TestName">
+        <classes>
+            <!-- Specify your test classes here -->
+            <class name="com." />
+            <class name="com." />
+        </classes>
+    </test>
+</suite>
