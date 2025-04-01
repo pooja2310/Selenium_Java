@@ -1,10 +1,9 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
-<suite name="SuiteName">
-    <test name="TestName">
+<suite name="UI_Automation">
+    <test name="Registration">
         <classes>
             <!-- Specify your test classes here -->
-            <class name="com." />
-            <class name="com." />
+            <class name="org.example.login.RegistrationTest"/>
         </classes>
     </test>
 </suite>
