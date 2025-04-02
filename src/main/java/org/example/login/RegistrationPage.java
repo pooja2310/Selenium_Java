@@ -23,12 +23,20 @@ public class RegistrationPage extends TestBase {
 	@FindBy(xpath = "//input[@value='Register']")
 	WebElement register_btn;
 	
-	@FindBy(xpath = "//input[@type='submit']")
-	WebElement Back_to_Login_btn;
+	@FindBy(xpath = "//a[contains(text(), 'Back to Login')]")
+	WebElement back_to_Login_btn;
+
+//	@FindBy(xpath = "///head//title[contains(text(),'Selenium Practice - Register')]")
+//	WebElement registerTitle;
 	
-	@FindBy(xpath = "//input[@type='submit']")
-	WebElement registerTitle;
+	@FindBy(xpath = "//h1[contains(text(),'Welcome,Register')]")
+	WebElement registerHeader;
+
+//	@FindBy(xpath= "//head//title[contains(text(),'Selenium Practice - Login')]")
+//	WebElement loginTitle;
 	
+	@FindBy(xpath = "//h1[contains(text(),'Welcome, Login In')]")
+	WebElement loginHeader;
 	
 	public RegistrationPage() {
 		PageFactory.initElements(driver, this);   //Register page constructor
@@ -36,6 +44,18 @@ public class RegistrationPage extends TestBase {
 	
 	public String validateRegisterPageTitle() {
 		return driver.getTitle();
+	}
+	
+	public String validateRegisterPageHeader() {
+		return registerHeader.getText();
+	}
+	
+	public String validateLoginPageTitle() {
+		return driver.getTitle();
+	}
+	
+	public String validateLoginPageHeader() {
+		return loginHeader.getText();
 	}
 	
 	public void register(String fName, String lName, String uName, String pwd) throws InterruptedException {
@@ -48,9 +68,11 @@ public class RegistrationPage extends TestBase {
 		passWord.sendKeys(pwd);
 		Thread.sleep(1000);
 		register_btn.click();
+		Thread.sleep(1000);
 	}
 	
-	public void bck_login(){
-		Back_to_Login_btn.click();
+	public void bck_login() throws InterruptedException {
+		back_to_Login_btn.click();
+		Thread.sleep(5000);
 	}
 }

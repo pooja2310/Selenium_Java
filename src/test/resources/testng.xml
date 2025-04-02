@@ -3,7 +3,8 @@
     <test name="Registration">
         <classes>
             <!-- Specify your test classes here -->
-            <class name="org.example.login.RegistrationTest"/>
+           <class name="org.example.login.RegistrationTest"/>
+            <class name="org.example.login.LoginTest"/>
         </classes>
     </test>
 </suite>
