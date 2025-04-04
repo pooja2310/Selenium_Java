@@ -8,24 +8,39 @@ import org.openqa.selenium.support.FindBy;
 import java.util.List;
 
 public class WorldometersDynamicElements extends TestBase {
-
-//	@FindBy(xpath=)
-//	WebElement todays_count;
-//
-//	@FindBy(xpath=)
-//	WebElement years_count;
 	
-	public void validateAndPrintData() throws InterruptedException {
-		Thread.sleep(2000);
-		int count =1;
-		while(count <=20) {
-			System.out.println(count + " sec");
-			if(count==21)
-				break;
-			List<WebElement> populationList = driver.findElements(By.xpath("//div//span[@rel='current_population'])"));
-			for (WebElement list : populationList) {
-				System.out.println(list.getText());
+	static String  current_population= "//div/span[@class='rts-counter' and @rel='current_population']";
+	static String today_population= "//div[contains(text(),'today')]//parent::div//span[@class='rts-counter text-2xl font-bold']";
+	
+	static String year_population="//div[contains(text(),'This Year')]//parent::div//span[@class='rts-counter text-2xl font-bold']";
+	public void validateCurrentPopulation(String locator) throws InterruptedException {
+		int count = 0;
+		while (count <= 20) {
+			System.out.println("=============Current population count===============");
+			List<WebElement> populationList = driver.findElements(By.xpath(locator));
+			for (WebElement list1 : populationList) {
+				System.out.println(list1.getText());
 			}
+			count++;
 		}
+		System.out.println("Total number of Records: " + count);
+	}
+	
+	public void validateTodaysAndYearPopulationData(String today_locator,String year_locator) throws InterruptedException {
+		int count = 0;
+		while (count <= 20) {
+			System.out.println("=============Today's population count===============");
+			List<WebElement> populationList1 = driver.findElements(By.xpath(today_locator));
+			for (WebElement list1 : populationList1) {
+				System.out.println(list1.getText());
+			}
+			System.out.println("=============Year population count===============");
+			List<WebElement> populationList2 = driver.findElements(By.xpath(year_locator));
+			for (WebElement list2 : populationList2) {
+				System.out.println(list2.getText());
+			}
+			count++;
+		}
+		System.out.println("Total number of Records: " + count);
 	}
 }

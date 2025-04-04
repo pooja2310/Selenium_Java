@@ -7,10 +7,8 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class WorldometersDynamicElementsTest extends TestBase {
+	
 	WorldometersDynamicElements wde;
-//	String current_population = "//div//span[@rel='current_population']";
-	String todays_population ="";
-	String years_population ="";
 	
 	public WorldometersDynamicElementsTest() {
 		super();
@@ -24,10 +22,10 @@ public class WorldometersDynamicElementsTest extends TestBase {
 	}
 	
 	@Test
-	public void validateDynamicElements() throws InterruptedException {
-        Thread.sleep(2000);
-		wde.validateAndPrintData();
-	}
+	public void validatePopulation() throws InterruptedException {
+			wde.validateCurrentPopulation(wde.current_population);
+			wde.validateTodaysAndYearPopulationData(wde.today_population, wde.year_population);
+		}
 	
 	@AfterMethod
 	public void closeTest() {
