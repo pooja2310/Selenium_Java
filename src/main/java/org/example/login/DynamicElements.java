@@ -3,11 +3,10 @@ package org.example.login;
 import org.example.base.TestBase;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 
 import java.util.List;
 
-public class WorldometersDynamicElements extends TestBase {
+public class DynamicElements extends TestBase {
 	
 	static String  current_population= "//div/span[@class='rts-counter' and @rel='current_population']";
 	static String today_population= "//div[contains(text(),'today')]//parent::div//span[@class='rts-counter text-2xl font-bold']";

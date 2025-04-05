@@ -1,16 +1,15 @@
 package org.example.login;
 
 import org.example.base.TestBase;
-import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class WorldometersDynamicElementsTest extends TestBase {
+public class DynamicElementsTest extends TestBase {
 	
-	WorldometersDynamicElements wde;
+	DynamicElements wde;
 	
-	public WorldometersDynamicElementsTest() {
+	public DynamicElementsTest() {
 		super();
 	}
 	
@@ -18,7 +17,7 @@ public class WorldometersDynamicElementsTest extends TestBase {
 	public void setup() throws InterruptedException {
 		initialization();
 		Thread.sleep(2000);
-		wde = new WorldometersDynamicElements();
+		wde = new DynamicElements();
 	}
 	
 	@Test

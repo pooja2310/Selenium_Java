@@ -4,8 +4,9 @@
         <classes>
             <!-- Specify your test classes here -->
           <!-- <class name="org.example.login.RegistrationTest"/>
-            <class name="org.example.login.LoginTest"/> -->
-            <class name="org.example.login.WorldometersDynamicElementsTest"/>
+            <class name="org.example.login.LoginTest"/>
+            <class name="org.example.login.DynamicElementsTest"/> -->
+             <class name="org.example.login.WebTableHandlingTest"/>
         </classes>
     </test>
 </suite>

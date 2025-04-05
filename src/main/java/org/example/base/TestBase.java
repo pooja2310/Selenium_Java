@@ -35,7 +35,7 @@ public class TestBase {
 		}
 		Thread.sleep(5000);
 		driver.manage().deleteAllCookies();
-		driver.get(prop.getProperty("website"));
+		driver.get(prop.getProperty("webtable_website"));
 		Thread.sleep(5000);
 	}
 }
