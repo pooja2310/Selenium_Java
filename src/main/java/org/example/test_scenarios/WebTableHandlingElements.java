@@ -1,4 +1,4 @@
-package org.example.login;
+package org.example.test_scenarios;
 
 import org.example.base.TestBase;
 import org.openqa.selenium.By;

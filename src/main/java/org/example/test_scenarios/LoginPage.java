@@ -1,6 +1,5 @@
-package org.example.login;
+package org.example.test_scenarios;
 
-import net.bytebuddy.asm.Advice;
 import org.example.base.TestBase;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

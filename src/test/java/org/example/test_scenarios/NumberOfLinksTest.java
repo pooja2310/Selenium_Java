@@ -1,29 +1,28 @@
-package org.example.login;
+package org.example.test_scenarios;
 
 import org.example.base.TestBase;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class WebTableHandlingTest extends TestBase {
+public class NumberOfLinksTest extends TestBase
+{
+	NumberOfLinks numberOfLinks;
 	
-	public WebTableHandlingTest() {
-		super();
+	public NumberOfLinksTest (){
+	  super();
 	}
-	
-	WebTableHandlingElements wthe;
-	
 	
 	@BeforeMethod
 	public void setup() throws InterruptedException {
 		initialization();
 		Thread.sleep(2000);
-		wthe = new WebTableHandlingElements();
+		numberOfLinks=new NumberOfLinks();
 	}
 	
 	@Test
-	public void validateWebTableData() {
-		wthe.webTableHandle();
+	public void countOfLinks(){
+		numberOfLinks.countOfLinks();
 	}
 	
 	@AfterMethod
@@ -31,4 +30,5 @@ public class WebTableHandlingTest extends TestBase {
 		if (driver != null)
 			driver.quit();
 	}
+	
 }

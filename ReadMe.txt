@@ -15,3 +15,5 @@ It eliminates the need to manually download drivers and store them in a specific
 
 7. If we are getting No tests were found then always check that Tests are present in Test classes.
 example. @test should be present. Only @BeforeClass and @AfterClass won't work.
+
+8. To run different cases ,add test class name in testng.xml.

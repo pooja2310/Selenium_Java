@@ -1,7 +1,6 @@
-package org.example.login;
+package org.example.test_scenarios;
 
 import org.example.base.TestBase;
-import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
