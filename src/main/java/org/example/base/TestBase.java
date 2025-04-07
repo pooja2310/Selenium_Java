@@ -35,7 +35,7 @@ public class TestBase {
 		}
 		Thread.sleep(5000);
 		driver.manage().deleteAllCookies();
-		driver.get(prop.getProperty("brokenlink_url"));
+		driver.get(prop.getProperty("dropdown_url"));
 		Thread.sleep(5000);
 	}
 }
