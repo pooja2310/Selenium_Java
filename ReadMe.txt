@@ -7,7 +7,7 @@ WebDriver manager is to automatically manage browser drivers.You don't need to a
 if you're using WebDriverManager. The main purpose of WebDriverManager is to automatically download and manage the browser driver binaries for you.
 It eliminates the need to manually download drivers and store them in a specific folder within your project.
 
-4.Create testng.xml and give there path in pom.xml So that maven will execute tests mentioned in testng.xml.
+4.Create testng.xml and give there path in pom.xml in suiteXmlFile section So that maven will execute tests mentioned in testng.xml.
 
 5. Add Template in testng.xml
 
@@ -17,3 +17,7 @@ It eliminates the need to manually download drivers and store them in a specific
 example. @test should be present. Only @BeforeClass and @AfterClass won't work.
 
 8. To run different cases ,add test class name in testng.xml.
+
+9. TO access java 8 Streams method ensure to add java version in pom.xml in configuration section of maven-compiler-plugin artifact.
+example: if we are using java 17 then add that in target and source tag of pom.xml.
+

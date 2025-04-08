@@ -35,7 +35,7 @@ public class TestBase {
 		}
 		Thread.sleep(5000);
 		driver.manage().deleteAllCookies();
-		driver.get(prop.getProperty("dropdown_url"));
+		driver.get(prop.getProperty("datepicker_url"));
 		Thread.sleep(5000);
 	}
 }
