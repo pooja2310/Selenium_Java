@@ -23,7 +23,7 @@ public class DateTimePickerTest extends TestBase {
 	
 	@Test(priority = 1)
 	public void validateDateTimePicker() throws InterruptedException {
-		dateTimePickerElements.monthYearSelection("7", "September", "2026");
+		dateTimePickerElements.monthYearSelection("19", "April", "2025");
 	}
 	
 	
