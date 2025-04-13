@@ -6,6 +6,8 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.io.IOException;
+
 public class LoginTest extends TestBase {
 	LoginPage loginpage;
 	
@@ -20,9 +22,10 @@ public class LoginTest extends TestBase {
 	}
 	
 	@Test(priority = 0, enabled = true)
-	public void login() throws InterruptedException {
+	public void login() throws Exception {
 		loginpage.bck_login();
 		Thread.sleep(2000);
+		loginpage.takeScreenShot("LoginPage");
 		System.out.println("Login page is opened");
 		String loginHeader = loginpage.validateLoginPageHeader();
 		Assert.assertEquals(loginHeader, "Welcome, Login In");
@@ -31,6 +34,7 @@ public class LoginTest extends TestBase {
 		System.out.println("login has been done");
 		Thread.sleep(1000);
 		loginpage.newUser();
+		loginpage.takeScreenShot("RegisterPage");
 		String registerTitle = loginpage.validateRegisterPageTitle();
 		Assert.assertEquals(registerTitle, "Selenium Practice - Register");
 		System.out.println("Verifying register page title");
