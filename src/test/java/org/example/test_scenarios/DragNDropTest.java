@@ -5,10 +5,10 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class ActionClassTest extends TestBase {
-	ActionClassElements actionClassElements;
+public class DragNDropTest extends TestBase {
+	DragNDropElements dragNDropElements;
 	
-	public ActionClassTest() {
+	public DragNDropTest() {
 		super();
 	}
 	
@@ -16,13 +16,12 @@ public class ActionClassTest extends TestBase {
 	public void setup() throws InterruptedException {
 		initialization();
 		Thread.sleep(2000);
-		actionClassElements = new ActionClassElements();
+		dragNDropElements = new DragNDropElements();
 	}
 	
 	@Test(priority = 1)
 	public void validateActionClass() throws InterruptedException {
-		actionClassElements.actionClass();
-		
+		dragNDropElements.actionClass();
 	}
 	
 	
