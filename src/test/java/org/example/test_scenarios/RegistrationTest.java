@@ -4,6 +4,7 @@ import org.example.base.TestBase;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
+@Listeners(CustomListener.class)
 public class RegistrationTest extends TestBase {
 	RegistrationPage registerPage;
 	

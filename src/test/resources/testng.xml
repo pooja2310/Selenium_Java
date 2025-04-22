@@ -1,12 +1,16 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 <suite name="UI_Automation">
+    <listeners>
+        <listener class-name="ExtentReportListener.ExtentListener"></listener>
+        <listener class-name="org.example.test_scenarios.CustomListener"></listener>
+    </listeners>
     <test name="Registration">
         <classes>
             <!-- Specify your test classes here -->
-          <!-- <class name="org.example.test_scenarios.RegistrationTest"/>
-            <class name="org.example.test_scenarios.LoginTest"/>
-            <class name="org.example.test_scenarios.DynamicElementsTest"/> -->
-             <class name="org.example.test_scenarios.BrokenLinksTest"/>
+          <class name="org.example.test_scenarios.RegistrationTest"/>
+            <!--  <class name="org.example.test_scenarios.LoginTest"/>
+             <class name="org.example.test_scenarios.DynamicElementsTest"/>
+             <class name="org.example.test_scenarios.AlertPopupHandlingTest"/>-->
         </classes>
     </test>
 </suite>
