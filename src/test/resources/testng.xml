@@ -4,10 +4,10 @@
         <listener class-name="ExtentReportListener.ExtentListener"></listener>
         <listener class-name="org.example.test_scenarios.CustomListener"></listener>
     </listeners>
-    <test name="Registration">
+    <test name="HeadlessMode">
         <classes>
             <!-- Specify your test classes here -->
-          <class name="org.example.test_scenarios.RegistrationTest"/>
+          <class name="org.example.test_scenarios.HeadlessEdgeTest"/>
             <!--  <class name="org.example.test_scenarios.LoginTest"/>
              <class name="org.example.test_scenarios.DynamicElementsTest"/>
              <class name="org.example.test_scenarios.AlertPopupHandlingTest"/>-->
