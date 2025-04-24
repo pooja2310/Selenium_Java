@@ -4,10 +4,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
 
+@Listeners(CustomListener.class)
 public class HeadlessEdgeTest {
 	
-	public static void main(String[] args) {
+  @Test
+	public void setup(){
 		// Setup Edge driver
 		WebDriverManager.edgedriver().setup();
 		
